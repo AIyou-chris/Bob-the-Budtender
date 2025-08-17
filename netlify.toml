@@ -1,0 +1,85 @@
+# 🌿 Bob the Budtender - Netlify Configuration
+
+[build]
+  # Build command
+  command = "npm run build"
+  
+  # Output directory
+  publish = "dist"
+  
+  # Node.js version
+  environment = { NODE_VERSION = "18" }
+
+# 🔄 Redirects for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 🔒 Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Cannabis compliance headers
+    X-Cannabis-Age-Verification = "required"
+    X-Cannabis-Compliance = "enabled"
+
+# 🎯 API Proxy (if needed for CORS)
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.openai.com/:splat"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+# 🌿 Cannabis-specific redirects
+[[redirects]]
+  from = "/budtender"
+  to = "/chat"
+  status = 301
+
+[[redirects]]
+  from = "/dispensary"
+  to = "/admin"
+  status = 301
+
+# 📱 Mobile optimization
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 🖼️ Image optimization
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 🔧 Environment-specific settings
+[context.production.environment]
+  NODE_ENV = "production"
+  VITE_APP_ENV = "production"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+  VITE_APP_ENV = "preview"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
+  VITE_APP_ENV = "development"

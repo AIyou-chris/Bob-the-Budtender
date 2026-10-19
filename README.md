@@ -2,6 +2,26 @@
 
 ![Bob the Budtender](public/Bob%20the%20budtender1.png)
 
+## Contents
+
+*13 sections. A long file may only be read in part, so jump to the section you need from this list.*
+
+- [🚀 **The Future of Cannabis Retail is Here**](#the-future-of-cannabis-retail-is-here)
+- [✨ **Key Features**](#key-features)
+- [🛠️ **Tech Stack**](#tech-stack)
+- [🚀 **Quick Start**](#quick-start)
+- [📁 **Project Structure**](#project-structure)
+- [🌿 **Cannabis Features**](#cannabis-features)
+- [🔧 **Configuration**](#configuration)
+- [📊 **Analytics & Insights**](#analytics--insights)
+- [🚀 **Deployment**](#deployment)
+- [🤝 **Contributing**](#contributing)
+- [📄 **License**](#license)
+- [🆘 **Support**](#support)
+- [🎯 **Roadmap**](#roadmap)
+
+---
+
 ## 🚀 **The Future of Cannabis Retail is Here**
 
 Bob the Budtender is an AI-powered cannabis assistant that transforms every customer interaction into a personalized, educational, and delightful experience. Built by seasoned tech entrepreneurs with 15+ years of experience, Bob combines cutting-edge AI with deep cannabis industry knowledge.
